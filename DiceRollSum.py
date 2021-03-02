@@ -1,4 +1,4 @@
-# roll 2 dice and add program
+# program to roll 2 dice and add their sum
 
 # import external packages
 from __future__ import print_function 
@@ -10,7 +10,7 @@ from fractions import Fraction
 from Random import Random
 
 
-# main function for our coin toss Python code
+# main function 
 if __name__ == "__main__":
     # if the user includes the flag -h or --help print the options
     if '-h' in sys.argv or '--help' in sys.argv:
@@ -28,7 +28,7 @@ if __name__ == "__main__":
     prob4 = Fraction(1,6)
     prob5 = Fraction(1,6)
 
-    # default number of coin tosses (per experiment)
+    # default number of dice rolls (per experiment)
     Nroll = 1
 
     # default number of experiments
@@ -89,7 +89,7 @@ if __name__ == "__main__":
         for e in range(0,Nexp):
             for t in range(0,Nroll):
                 outfile.write(str(random.DiceRoll(prob1,prob2,prob3,prob4,prob5)+random.DiceRoll(prob1,prob2,prob3,prob4,prob5))+" ")
-            outfile.write(" \n")
+            outfile.write("\n")
         outfile.close()
     else:
         for e in range(0,Nexp):
